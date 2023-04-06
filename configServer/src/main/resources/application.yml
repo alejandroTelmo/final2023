@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/alejandroTelmo/configData
+          uri: https://github.com/alejandroTelmo/configDataFinal
           default-label: main
           force-pull: true
           search-paths: configData
