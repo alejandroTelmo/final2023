@@ -1,5 +1,6 @@
 package com.dh.serie.service;
 
+import com.dh.serie.event.SerieCreadaEventProducer;
 import com.dh.serie.model.Serie;
 import com.dh.serie.repository.SerieRepository;
 import org.springframework.stereotype.Service;
@@ -10,10 +11,13 @@ import java.util.List;
 public class SerieService {
 
     private final SerieRepository repository;
+    private final SerieCreadaEventProducer serieCreadaEventProducer;
 
 
-    public SerieService(SerieRepository repository) {
+    public SerieService(SerieRepository repository, SerieCreadaEventProducer serieCreadaEventProducer) {
         this.repository = repository;
+
+        this.serieCreadaEventProducer = serieCreadaEventProducer;
     }
 
     public List<Serie> getAll() {
@@ -25,6 +29,7 @@ public class SerieService {
     }
 
     public String create(Serie serie) {
+        serieCreadaEventProducer.publishCrearSerie(serie);
         repository.save(serie);
         return serie.getId();
     }

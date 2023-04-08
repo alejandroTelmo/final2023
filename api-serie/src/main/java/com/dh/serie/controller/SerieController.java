@@ -1,5 +1,6 @@
 package com.dh.serie.controller;
 
+import com.dh.serie.event.SerieCreadaEventProducer;
 import com.dh.serie.model.Serie;
 import com.dh.serie.service.SerieService;
 import org.springframework.http.HttpStatus;
@@ -12,9 +13,11 @@ import java.util.List;
 public class SerieController {
 
     private final SerieService serieService;
+    //private final SerieCreadaEventProducer serieCreadaEventProducer;
 
     public SerieController(SerieService serieService) {
         this.serieService = serieService;
+
     }
 
     @GetMapping
@@ -31,6 +34,7 @@ public class SerieController {
     @ResponseStatus(HttpStatus.CREATED)
     public String create(@RequestBody Serie serie) {
         serieService.create(serie);
+        //serieCreadaEventProducer.publishCrearSerie(serie);
         return serie.getId();
     }
 

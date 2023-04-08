@@ -1,6 +1,8 @@
 package com.dh.catalog.client;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +16,8 @@ public interface MovieServiceClient {
 	@GetMapping("/api/v1/movies/{genre}")
 	List<MovieDto> getMovieByGenre(@PathVariable (value = "genre") String genre);
 
-
+@AllArgsConstructor
+@NoArgsConstructor
 	@Getter
 	@Setter
 	class MovieDto{
