@@ -3,7 +3,8 @@ server:
 spring:
   application:
     name: api-catalog
-
+  zipkin:
+    baseUrl: http://localhost:9411/
 info:
   application:
     name: api-catalog
