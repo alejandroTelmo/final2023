@@ -175,5 +175,12 @@
     <orderEntry type="library" name="Maven: io.zipkin.reporter2:zipkin-sender-kafka:2.16.3" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.reporter2:zipkin-sender-activemq-client:2.16.3" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.reporter2:zipkin-sender-amqp-client:2.16.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-mongodb:2.7.5" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-sync:4.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:bson:4.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:4.6.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.mongodb:bson-record-codec:4.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-mongodb:3.4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.7.5" level="project" />
   </component>
 </module>

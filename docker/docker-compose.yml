@@ -36,3 +36,18 @@ services:
     expose:
       - 15672
       - 5672
+
+  mongo-container:
+    image: mongo
+    container_name: mongo-container
+    restart: on-failure
+    environment:
+      MONGO_INITDB_DATABASE: 'inscription-dev-mongo'
+      MONGO_INITDB_ROOT_USERNAME: 'usr-inscription-mongo'
+      MONGO_INITDB_ROOT_PASSWORD: 'pwd-inscription-mongo'
+    ports:
+      - 27018:27018
+    expose:
+      - 27018
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro

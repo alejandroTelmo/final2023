@@ -23,6 +23,10 @@ public class MovieService {
         this.movieCreadaEventProducer = movieCreadaEventProducer;
     }
 
+    public List<Movie> getAll(){
+        return movieRepository.findAll();
+    }
+
     public List<Movie> findByGenre(String genre) {
         return movieRepository.findByGenre(genre);
     }
