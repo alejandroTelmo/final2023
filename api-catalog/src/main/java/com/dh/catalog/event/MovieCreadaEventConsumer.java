@@ -22,10 +22,16 @@ public class MovieCreadaEventConsumer {
 
     @RabbitListener(queues = RabbitMQConfigCatalog.QUEUE_MOVIE_CREADA)
     public void listen(MovieServiceClient.MovieDto mensaje) {
-        System.out.println(mensaje.getName());
-        System.out.println(mensaje.getGenre());
-        System.out.println("New Movie");
-        movieService.create(mensaje);
+
+        try{
+            System.out.println(mensaje.getName());
+            System.out.println(mensaje.getGenre());
+            System.out.println("New Movie");
+            movieService.create(mensaje);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 
     @AllArgsConstructor

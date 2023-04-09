@@ -6,10 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +26,8 @@ public interface SerieServiceClient {
   @NoArgsConstructor
   @Setter
   @Getter
-  @Document(collection = "seriemg")
+  @Entity
+ @Table(name = "catalogserie")
     class SerieDTO{
       @Id
       private String id;

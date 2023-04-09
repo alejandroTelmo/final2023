@@ -1,9 +1,6 @@
 package com.dh.catalog.controller;
-
 import com.dh.catalog.client.MovieServiceClient;
-
 import com.dh.catalog.client.SerieServiceClient;
-import com.dh.catalog.service.MovieService;
 import lombok.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

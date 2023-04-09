@@ -12,6 +12,18 @@ services:
       - '3306:3306'
     expose:
       - '3306'
+  mysql1:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'catalog'
+      MYSQL_USER: 'usr-movie'
+      MYSQL_PASSWORD: 'pwd-movie'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3307:3306'
+    expose:
+      - '3306'
   zipkin-server-container:
     image: openzipkin/zipkin-slim
     container_name: zipkin-server-container
@@ -37,17 +49,3 @@ services:
       - 15672
       - 5672
 
-  mongo-container:
-    image: mongo
-    container_name: mongo-container
-    restart: on-failure
-    environment:
-      MONGO_INITDB_DATABASE: 'inscription-dev-mongo'
-      MONGO_INITDB_ROOT_USERNAME: 'usr-inscription-mongo'
-      MONGO_INITDB_ROOT_PASSWORD: 'pwd-inscription-mongo'
-    ports:
-      - 27018:27018
-    expose:
-      - 27018
-    volumes:
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
