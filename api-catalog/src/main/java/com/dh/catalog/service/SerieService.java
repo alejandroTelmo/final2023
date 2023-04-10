@@ -21,4 +21,7 @@ public class SerieService {
         serieRepository.save(serieDTO);
         return serieDTO.getId();
     }
+    public List<SerieServiceClient.SerieDTO> findByGenre(String genre){
+        return serieRepository.findByGenre(genre);
+    }
 }

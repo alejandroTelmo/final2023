@@ -24,8 +24,6 @@ public class SerieCreadaEventConsumer {
     @RabbitListener(queues = RabbitMQConfigCatalog.QUEUE_SERIE_CREADA)
     public void listen(SerieServiceClient.SerieDTO mensaje) {
         try{
-            System.out.println(mensaje.getName());
-            System.out.println(mensaje.getGenre());
             System.out.println("New Serie");
             serieService.create(mensaje);
         }catch (Exception e){

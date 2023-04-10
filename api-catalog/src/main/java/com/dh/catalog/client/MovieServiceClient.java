@@ -6,11 +6,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.List;
 
 @FeignClient(name="api-movie") //,url = "http://localhost:8085/api-movie"
@@ -25,11 +24,10 @@ public interface MovieServiceClient {
 	@NoArgsConstructor
 	@Getter
 	@Setter
-	@Entity
-	@Table(name = "catalogmovie")
+	@Document(collection = "movies")
 	class MovieDto{
 		@Id
-		private Long id;
+		private String id;
 
 		private String name;
 

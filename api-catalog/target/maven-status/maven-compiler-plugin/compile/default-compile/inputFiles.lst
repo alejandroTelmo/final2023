@@ -1,0 +1,11 @@
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/repository/SerieRepository.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/event/SerieCreadaEventConsumer.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/controller/CatalogController.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/service/SerieService.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/repository/MovieRepository.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/client/MovieServiceClient.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/ApiCatalogApplication.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/client/SerieServiceClient.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/service/MovieService.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/config/RabbitMQConfigCatalog.java
+/Users/macbookpro/Documents/final2023/api-catalog/src/main/java/com/dh/catalog/event/MovieCreadaEventConsumer.java

@@ -24,8 +24,6 @@ public class MovieCreadaEventConsumer {
     public void listen(MovieServiceClient.MovieDto mensaje) {
 
         try{
-            System.out.println(mensaje.getName());
-            System.out.println(mensaje.getGenre());
             System.out.println("New Movie");
             movieService.create(mensaje);
         }catch (Exception e){
